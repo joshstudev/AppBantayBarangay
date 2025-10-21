@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppBantayBarangay.Views.LoginPage"
+             NavigationPage.HasNavigationBar="False"
+             Padding="0"
+             BackgroundColor="{StaticResource PrimaryBlue}">
+             
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="BackgroundWhite">White</Color>
+            <Color x:Key="PrimaryBlue">#007AFF</Color>
+            <Color x:Key="AccentYellow">#FFD700</Color>
+            <Color x:Key="AccentRed">#FF3B30</Color>
+            <Style TargetType="Entry">
+                <Setter Property="Margin" Value="20,5"/>
+                <Setter Property="HeightRequest" Value="45"/>
+                <Setter Property="BackgroundColor" Value="#F5F5F5"/>
+                <Setter Property="PlaceholderColor" Value="#A0A0A0"/>
+                <Setter Property="Margin" Value="20,5,20,5"/>
+            </Style>
+            <Style TargetType="Button">
+                <Setter Property="Margin" Value="20,10"/>
+                <Setter Property="HeightRequest" Value="50"/>
+                <Setter Property="CornerRadius" Value="25"/>
+                <Setter Property="TextColor" Value="White"/>
+            </Style>
+            <Style TargetType="Picker">
+                <Setter Property="Margin" Value="20,5"/>
+                <Setter Property="HeightRequest" Value="45"/>
+                <Setter Property="BackgroundColor" Value="#F5F5F5"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <StackLayout VerticalOptions="Start" Spacing="0">
+        <Grid BackgroundColor="{StaticResource PrimaryBlue}" Padding="10" HeightRequest="60" VerticalOptions="Start">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Frame Grid.Column="0" HeightRequest="60" WidthRequest="50" CornerRadius="25" Padding="0" BackgroundColor="White" VerticalOptions="Center" HorizontalOptions="Start">
+                <Label Text="BB" TextColor="{StaticResource PrimaryBlue}" FontAttributes="Bold" HorizontalOptions="Center" VerticalOptions="Center"/>
+            </Frame>
+            <Label Text="BantayBarangay" TextColor="White" FontSize="20" Grid.Column="1" HorizontalTextAlignment="Center" VerticalOptions="Center" Margin="0,0,58,0" FontAttributes="Bold"/>
+     </Grid>
+
+     <!-- White content area under the blue header -->
+     <Frame HasShadow="False" CornerRadius="0" BackgroundColor="White" Padding="0">
+         <StackLayout Padding="20" Spacing="10">
+          <Label Text="Welcome Back!"
+              FontSize="24"
+              FontAttributes="Bold"
+              TextColor="{StaticResource PrimaryBlue}"
+              HorizontalOptions="Center"
+              Margin="0,60,0,20"/>
+
+          <Picker x:Name="UserTypePicker"
+               Title="Select User Type"
+               TextColor="{StaticResource PrimaryBlue}">
+            <Picker.Items>
+                <x:String>Official</x:String>
+                <x:String>Resident</x:String>
+            </Picker.Items>
+     </Picker>
+
+          <Entry x:Name="PhoneNumberEntry"
+              Placeholder="Phone Number"
+              Keyboard="Telephone"
+              TextColor="{StaticResource PrimaryBlue}"/>
+
+          <Entry x:Name="PasswordEntry"
+              Placeholder="Password"
+              IsPassword="True"
+              TextColor="{StaticResource PrimaryBlue}"/>
+
+          <Button Text="LOGIN"
+               BackgroundColor="{StaticResource PrimaryBlue}"
+               Clicked="OnLoginClicked"/>
+
+          <Button Text="REGISTER"
+               BackgroundColor="{StaticResource AccentYellow}"
+               TextColor="{StaticResource PrimaryBlue}"
+               Clicked="OnRegisterClicked"/>
+
+          <Label Text="Don't have an account? Sign up now!"
+              HorizontalOptions="Center"
+              TextColor="{StaticResource PrimaryBlue}"
+              Margin="0,20,0,0"/>
+         </StackLayout>
+     </Frame>
+    </StackLayout>
+</ContentPage>

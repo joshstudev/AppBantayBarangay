@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppBantayBarangay.Views.RegistrationPage"
+             NavigationPage.HasNavigationBar="False"
+             Padding="0"
+             BackgroundColor="{StaticResource PrimaryBlue}">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="PrimaryBlue">#007AFF</Color>
+            <Color x:Key="AccentYellow">#FFD700</Color>
+            <Color x:Key="AccentRed">#FF3B30</Color>
+            <Style TargetType="Entry">
+                <Setter Property="HeightRequest" Value="45"/>
+                <Setter Property="BackgroundColor" Value="#F5F5F5"/>
+                <Setter Property="PlaceholderColor" Value="#A0A0A0"/>
+                <Setter Property="Margin" Value="20,5,20,5"/>
+            </Style>
+            <Style TargetType="Button">
+                <Setter Property="Margin" Value="20,10"/>
+                <Setter Property="HeightRequest" Value="50"/>
+                <Setter Property="CornerRadius" Value="25"/>
+                <Setter Property="TextColor" Value="White"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+       <StackLayout Spacing="0" Padding="0">
+              <Grid BackgroundColor="{StaticResource PrimaryBlue}" Padding="10" HeightRequest="60" VerticalOptions="Start">
+                     <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
+                     </Grid.ColumnDefinitions>
+                     <!-- Fallback circular logo (always visible) -->
+                     <Frame Grid.Column="0" HeightRequest="50" WidthRequest="50" CornerRadius="25" Padding="0" BackgroundColor="White" VerticalOptions="Center" HorizontalOptions="Start">
+                            <Label Text="BB" TextColor="{StaticResource PrimaryBlue}" FontAttributes="Bold" HorizontalOptions="Center" VerticalOptions="Center"/>
+                     </Frame>
+                     <Label Text="BantayBarangay" TextColor="White" FontSize="20" Grid.Column="1" HorizontalTextAlignment="Center" VerticalOptions="Center" Margin="0,0,58,0" FontAttributes="Bold"/>
+              </Grid>
+
+              <Frame HasShadow="False" CornerRadius="0" BackgroundColor="White" Padding="0">
+                  <ScrollView>
+                     <StackLayout Padding="20">
+                            <Label Text="Create Account"
+                                      FontSize="24"
+                                      FontAttributes="Bold"
+                                      TextColor="{StaticResource PrimaryBlue}"
+                                      HorizontalOptions="Center"
+                                      Margin="0,0,0,20"/>
+
+            <Entry x:Name="FirstNameEntry"
+                   Placeholder="First Name"
+                   TextColor="{StaticResource PrimaryBlue}"/>
+
+            <Entry x:Name="MiddleNameEntry"
+                   Placeholder="Middle Name"
+                   TextColor="{StaticResource PrimaryBlue}"/>
+
+            <Entry x:Name="LastNameEntry"
+                   Placeholder="Last Name"
+                   TextColor="{StaticResource PrimaryBlue}"/>
+
+            <Entry x:Name="EmailEntry"
+                   Placeholder="Email"
+                   Keyboard="Email"
+                   TextColor="{StaticResource PrimaryBlue}"/>
+
+            <Entry x:Name="PasswordEntry"
+                   Placeholder="Password"
+                   IsPassword="True"
+                   TextColor="{StaticResource PrimaryBlue}"/>
+
+            <Entry x:Name="AddressEntry"
+                   Placeholder="Address"
+                   TextColor="{StaticResource PrimaryBlue}"/>
+
+            <Entry x:Name="PhoneNumberEntry"
+                   Placeholder="Phone Number"
+                   Keyboard="Telephone"
+                   TextColor="{StaticResource PrimaryBlue}"/>
+
+            <Button Text="REGISTER"
+                    BackgroundColor="{StaticResource PrimaryBlue}"
+                    Clicked="OnRegisterClicked"/>
+
+            <Button Text="Already have an account? Login"
+                    BackgroundColor="{StaticResource AccentYellow}"
+                    TextColor="{StaticResource PrimaryBlue}"
+                    Clicked="OnLoginClicked"/>
+                     </StackLayout>
+                  </ScrollView>
+              </Frame>
+       </StackLayout>
+</ContentPage>

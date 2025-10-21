@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppBantayBarangay.Views.ResidentPage"
+             BackgroundColor="White">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="PrimaryBlue">#007AFF</Color>
+            <Color x:Key="AccentYellow">#FFD700</Color>
+            <Color x:Key="AccentRed">#FF3B30</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <StackLayout>
+        <Frame BackgroundColor="{StaticResource AccentYellow}"
+               Padding="24"
+               CornerRadius="0">
+            <Label Text="Resident Dashboard"
+                   TextColor="{StaticResource PrimaryBlue}"
+                   FontSize="36"
+                   HorizontalTextAlignment="Center"/>
+        </Frame>
+
+        <Label Text="Welcome, Resident!"
+               FontSize="24"
+               TextColor="{StaticResource PrimaryBlue}"
+               HorizontalOptions="Center"
+               Margin="0,20"/>
+
+        <!-- Add more resident-specific content here -->
+    </StackLayout>
+</ContentPage>

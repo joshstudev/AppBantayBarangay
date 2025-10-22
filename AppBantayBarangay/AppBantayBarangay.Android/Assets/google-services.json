@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "159926877525",
+    "firebase_url": "https://bantaybarangay-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "bantaybarangay",
+    "storage_bucket": "bantaybarangay.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:159926877525:android:9bc3a97ec177c1a15503dc",
+        "android_client_info": {
+          "package_name": "BantayBarangay.Android"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD7LVRy5gDLvA_7-QbYK5Ar8qJvfasq7f0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:159926877525:android:a81e34ebba37c36c5503dc",
+        "android_client_info": {
+          "package_name": "com.companyname.appbantaybarangay"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD7LVRy5gDLvA_7-QbYK5Ar8qJvfasq7f0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:159926877525:android:e8cce562b910959f5503dc",
+        "android_client_info": {
+          "package_name": "com.companyname.bantaybarangayapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD7LVRy5gDLvA_7-QbYK5Ar8qJvfasq7f0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

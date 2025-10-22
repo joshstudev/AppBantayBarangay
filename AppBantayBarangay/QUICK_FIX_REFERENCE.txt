@@ -1,0 +1,128 @@
+═══════════════════════════════════════════════════════════════
+  APP WON'T RUN - QUICK FIX REFERENCE CARD
+═══════════════════════════════════════════════════════════════
+
+🚀 FASTEST FIX (Try This First!)
+═══════════════════════════════════════════════════════════════
+1. Close Visual Studio
+2. Run: Fix-AppNotRunning.ps1
+3. Reopen Visual Studio
+4. Build → Rebuild Solution
+5. Press F5
+
+═══════════════════════════════════════════════════════════════
+📋 MANUAL QUICK FIX
+═══════════════════════════════════════════════════════════════
+1. Build → Clean Solution
+2. Close Visual Studio
+3. Delete:
+   - AppBantayBarangay.Android\bin
+   - AppBantayBarangay.Android\obj
+   - AppBantayBarangay\bin
+   - AppBantayBarangay\obj
+4. Reopen Visual Studio
+5. Right-click Solution → Restore NuGet Packages
+6. Build → Rebuild Solution
+7. Press F5
+
+═══════════════════════════════════════════════════════════════
+🔧 COMMON ISSUES & INSTANT FIXES
+═══════════════════════════════════════════════════════════════
+
+ISSUE: No device/emulator shown
+FIX: Tools → Android → Android Device Manager → Create New Device
+
+ISSUE: Build fails
+FIX: View → Error List (check errors)
+     Right-click Solution → Restore NuGet Packages
+
+ISSUE: "Package restore failed"
+FIX: Tools → Options → NuGet → Clear All NuGet Cache(s)
+     Right-click Solution → Restore NuGet Packages
+
+ISSUE: App crashes on startup
+FIX: View → Output → Select "Debug"
+     Check for error messages
+
+ISSUE: Deployment fails
+FIX: Restart emulator or reconnect device
+     Uninstall app from device
+     Try again
+
+ISSUE: "The application could not be started"
+FIX: Clean solution
+     Delete bin/obj folders
+     Rebuild
+
+═══════════════════════════════════════════════════════════════
+✅ PRE-RUN CHECKLIST
+═══════════════════════════════════════════════════════════════
+☐ AppBantayBarangay.Android is startup project (bold in Solution Explorer)
+☐ Android device/emulator selected in dropdown
+☐ Solution builds without errors (Build → Build Solution)
+☐ NuGet packages restored (no yellow warning icons)
+☐ Emulator fully booted (if using emulator)
+
+═══════════════════════════════════════════════════════════════
+🎯 STARTUP PROJECT FIX
+═══════════════════════════════════════════════════════════════
+1. Right-click "AppBantayBarangay.Android" in Solution Explorer
+2. Select "Set as Startup Project"
+3. Project name should now be BOLD
+4. Press F5
+
+═══════════════════════════════════════════════════════════════
+📱 CREATE ANDROID EMULATOR
+═══════════════════════════════════════════════════════════════
+1. Tools → Android → Android Device Manager
+2. Click "+ New Device"
+3. Select "Pixel 5 - API 33" (or similar)
+4. Click "Create"
+5. Wait for creation
+6. Select emulator from dropdown
+7. Press F5
+
+═══════════════════════════════════════════════════════════════
+🔍 WHERE TO FIND ERROR MESSAGES
+═══════════════════════════════════════════════════════════════
+Build Errors:    View → Error List
+Runtime Errors:  View → Output → Select "Debug"
+NuGet Errors:    View → Output → Select "Package Manager"
+
+═══════════════════════════════════════════════════════════════
+⚡ NUCLEAR OPTION (If Nothing Else Works)
+═══════════════════════════════════════════════════════════════
+1. Close Visual Studio
+2. Delete ALL bin and obj folders
+3. Delete .vs folder (hidden)
+4. Run: dotnet nuget locals all --clear
+5. Reopen Visual Studio
+6. Right-click Solution → Restore NuGet Packages
+7. Build → Rebuild Solution
+8. Press F5
+
+═══════════════════════════════════════════════════════════════
+📞 NEED MORE HELP?
+═══════════════════════════════════════════════════════════════
+See: APP_WONT_RUN_TROUBLESHOOTING.md (detailed guide)
+Run: Fix-AppNotRunning.ps1 (automated fix)
+
+═══════════════════════════════════════════════════════════════
+💡 TIPS
+═══════════════════════════════════════════════════════════════
+• Always check Output window for actual error messages
+• Emulator must be FULLY booted before deploying
+• USB debugging must be enabled on physical devices
+• Clean and rebuild after any project file changes
+• Restart Visual Studio if it becomes unresponsive
+
+═══════════════════════════════════════════════════════════════
+🎯 SUCCESS INDICATORS
+═══════════════════════════════════════════════════════════════
+✓ Build Output shows: "Build succeeded"
+✓ Output shows: "Deploying to [device name]"
+✓ Output shows: "Firebase initialized successfully"
+✓ App icon appears on device/emulator
+✓ LoginPage displays
+
+═══════════════════════════════════════════════════════════════
